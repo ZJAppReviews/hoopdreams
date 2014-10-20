@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EBA64F619F51B3F00C36ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA64F519F51B3F00C36ACC /* Foundation.framework */; };
+		0EBA64F819F51B3F00C36ACC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA64F719F51B3F00C36ACC /* CoreGraphics.framework */; };
+		0EBA64FA19F51B3F00C36ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA64F919F51B3F00C36ACC /* UIKit.framework */; };
+		0EBA650019F51B3F00C36ACC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA64FE19F51B3F00C36ACC /* InfoPlist.strings */; };
+		0EBA650219F51B3F00C36ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA650119F51B3F00C36ACC /* main.m */; };
+		0EBA650619F51B3F00C36ACC /* HDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA650519F51B3F00C36ACC /* HDAppDelegate.m */; };
+		0EBA650919F51B3F00C36ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA650719F51B3F00C36ACC /* Main.storyboard */; };
+		0EBA650C19F51B3F00C36ACC /* HDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA650B19F51B3F00C36ACC /* HDViewController.m */; };
+		0EBA650E19F51B3F00C36ACC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA650D19F51B3F00C36ACC /* Images.xcassets */; };
+		0EBA651519F51B3F00C36ACC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA651419F51B3F00C36ACC /* XCTest.framework */; };
+		0EBA651619F51B3F00C36ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA64F519F51B3F00C36ACC /* Foundation.framework */; };
+		0EBA651719F51B3F00C36ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA64F919F51B3F00C36ACC /* UIKit.framework */; };
+		0EBA651F19F51B3F00C36ACC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA651D19F51B3F00C36ACC /* InfoPlist.strings */; };
+		0EBA652119F51B3F00C36ACC /* hoopdreamsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA652019F51B3F00C36ACC /* hoopdreamsTests.m */; };
+		0EBA653419F51BB400C36ACC /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA652A19F51BB400C36ACC /* arrow.png */; };
+		0EBA653519F51BB400C36ACC /* basketball-court-floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA652B19F51BB400C36ACC /* basketball-court-floor.jpg */; };
+		0EBA653619F51BB400C36ACC /* basketballhoop.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA652C19F51BB400C36ACC /* basketballhoop.png */; };
+		0EBA653719F51BB400C36ACC /* buddy_icon_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA652D19F51BB400C36ACC /* buddy_icon_white.png */; };
+		0EBA653819F51BB400C36ACC /* buddy_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA652E19F51BB400C36ACC /* buddy_icon.png */; };
+		0EBA653919F51BB400C36ACC /* hand-reaching.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA652F19F51BB400C36ACC /* hand-reaching.jpg */; };
+		0EBA653A19F51BB400C36ACC /* hand-reaching.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA653019F51BB400C36ACC /* hand-reaching.png */; };
+		0EBA653B19F51BB400C36ACC /* location_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA653119F51BB400C36ACC /* location_icon.png */; };
+		0EBA653C19F51BB400C36ACC /* location-24-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA653219F51BB400C36ACC /* location-24-512.png */; };
+		0EBA653D19F51BB400C36ACC /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBA653319F51BB400C36ACC /* settings.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EBA651819F51B3F00C36ACC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EBA64EA19F51B3F00C36ACC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EBA64F119F51B3F00C36ACC;
+			remoteInfo = hoopdreams;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EBA64F219F51B3F00C36ACC /* hoopdreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hoopdreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EBA64F519F51B3F00C36ACC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0EBA64F719F51B3F00C36ACC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0EBA64F919F51B3F00C36ACC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0EBA64FD19F51B3F00C36ACC /* hoopdreams-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hoopdreams-Info.plist"; sourceTree = "<group>"; };
+		0EBA64FF19F51B3F00C36ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0EBA650119F51B3F00C36ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0EBA650319F51B3F00C36ACC /* hoopdreams-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hoopdreams-Prefix.pch"; sourceTree = "<group>"; };
+		0EBA650419F51B3F00C36ACC /* HDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDAppDelegate.h; sourceTree = "<group>"; };
+		0EBA650519F51B3F00C36ACC /* HDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDAppDelegate.m; sourceTree = "<group>"; };
+		0EBA650819F51B3F00C36ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0EBA650A19F51B3F00C36ACC /* HDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDViewController.h; sourceTree = "<group>"; };
+		0EBA650B19F51B3F00C36ACC /* HDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDViewController.m; sourceTree = "<group>"; };
+		0EBA650D19F51B3F00C36ACC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0EBA651319F51B3F00C36ACC /* hoopdreamsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hoopdreamsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EBA651419F51B3F00C36ACC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0EBA651C19F51B3F00C36ACC /* hoopdreamsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hoopdreamsTests-Info.plist"; sourceTree = "<group>"; };
+		0EBA651E19F51B3F00C36ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0EBA652019F51B3F00C36ACC /* hoopdreamsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hoopdreamsTests.m; sourceTree = "<group>"; };
+		0EBA652A19F51BB400C36ACC /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		0EBA652B19F51BB400C36ACC /* basketball-court-floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "basketball-court-floor.jpg"; sourceTree = "<group>"; };
+		0EBA652C19F51BB400C36ACC /* basketballhoop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketballhoop.png; sourceTree = "<group>"; };
+		0EBA652D19F51BB400C36ACC /* buddy_icon_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buddy_icon_white.png; sourceTree = "<group>"; };
+		0EBA652E19F51BB400C36ACC /* buddy_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buddy_icon.png; sourceTree = "<group>"; };
+		0EBA652F19F51BB400C36ACC /* hand-reaching.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hand-reaching.jpg"; sourceTree = "<group>"; };
+		0EBA653019F51BB400C36ACC /* hand-reaching.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hand-reaching.png"; sourceTree = "<group>"; };
+		0EBA653119F51BB400C36ACC /* location_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon.png; sourceTree = "<group>"; };
+		0EBA653219F51BB400C36ACC /* location-24-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-24-512.png"; sourceTree = "<group>"; };
+		0EBA653319F51BB400C36ACC /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EBA64EF19F51B3F00C36ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EBA64F819F51B3F00C36ACC /* CoreGraphics.framework in Frameworks */,
+				0EBA64FA19F51B3F00C36ACC /* UIKit.framework in Frameworks */,
+				0EBA64F619F51B3F00C36ACC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EBA651019F51B3F00C36ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EBA651519F51B3F00C36ACC /* XCTest.framework in Frameworks */,
+				0EBA651719F51B3F00C36ACC /* UIKit.framework in Frameworks */,
+				0EBA651619F51B3F00C36ACC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EBA64E919F51B3F00C36ACC = {
+			isa = PBXGroup;
+			children = (
+				0EBA64FB19F51B3F00C36ACC /* hoopdreams */,
+				0EBA651A19F51B3F00C36ACC /* hoopdreamsTests */,
+				0EBA64F419F51B3F00C36ACC /* Frameworks */,
+				0EBA64F319F51B3F00C36ACC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0EBA64F319F51B3F00C36ACC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA64F219F51B3F00C36ACC /* hoopdreams.app */,
+				0EBA651319F51B3F00C36ACC /* hoopdreamsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EBA64F419F51B3F00C36ACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA64F519F51B3F00C36ACC /* Foundation.framework */,
+				0EBA64F719F51B3F00C36ACC /* CoreGraphics.framework */,
+				0EBA64F919F51B3F00C36ACC /* UIKit.framework */,
+				0EBA651419F51B3F00C36ACC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EBA64FB19F51B3F00C36ACC /* hoopdreams */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA650419F51B3F00C36ACC /* HDAppDelegate.h */,
+				0EBA650519F51B3F00C36ACC /* HDAppDelegate.m */,
+				0EBA650719F51B3F00C36ACC /* Main.storyboard */,
+				0EBA650A19F51B3F00C36ACC /* HDViewController.h */,
+				0EBA650B19F51B3F00C36ACC /* HDViewController.m */,
+				0EBA653E19F51BBB00C36ACC /* images */,
+				0EBA650D19F51B3F00C36ACC /* Images.xcassets */,
+				0EBA64FC19F51B3F00C36ACC /* Supporting Files */,
+			);
+			path = hoopdreams;
+			sourceTree = "<group>";
+		};
+		0EBA64FC19F51B3F00C36ACC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA64FD19F51B3F00C36ACC /* hoopdreams-Info.plist */,
+				0EBA64FE19F51B3F00C36ACC /* InfoPlist.strings */,
+				0EBA650119F51B3F00C36ACC /* main.m */,
+				0EBA650319F51B3F00C36ACC /* hoopdreams-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EBA651A19F51B3F00C36ACC /* hoopdreamsTests */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA652019F51B3F00C36ACC /* hoopdreamsTests.m */,
+				0EBA651B19F51B3F00C36ACC /* Supporting Files */,
+			);
+			path = hoopdreamsTests;
+			sourceTree = "<group>";
+		};
+		0EBA651B19F51B3F00C36ACC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA651C19F51B3F00C36ACC /* hoopdreamsTests-Info.plist */,
+				0EBA651D19F51B3F00C36ACC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EBA653E19F51BBB00C36ACC /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA652A19F51BB400C36ACC /* arrow.png */,
+				0EBA652B19F51BB400C36ACC /* basketball-court-floor.jpg */,
+				0EBA652C19F51BB400C36ACC /* basketballhoop.png */,
+				0EBA652D19F51BB400C36ACC /* buddy_icon_white.png */,
+				0EBA652E19F51BB400C36ACC /* buddy_icon.png */,
+				0EBA652F19F51BB400C36ACC /* hand-reaching.jpg */,
+				0EBA653019F51BB400C36ACC /* hand-reaching.png */,
+				0EBA653119F51BB400C36ACC /* location_icon.png */,
+				0EBA653219F51BB400C36ACC /* location-24-512.png */,
+				0EBA653319F51BB400C36ACC /* settings.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0EBA64F119F51B3F00C36ACC /* hoopdreams */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EBA652419F51B3F00C36ACC /* Build configuration list for PBXNativeTarget "hoopdreams" */;
+			buildPhases = (
+				0EBA64EE19F51B3F00C36ACC /* Sources */,
+				0EBA64EF19F51B3F00C36ACC /* Frameworks */,
+				0EBA64F019F51B3F00C36ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hoopdreams;
+			productName = hoopdreams;
+			productReference = 0EBA64F219F51B3F00C36ACC /* hoopdreams.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0EBA651219F51B3F00C36ACC /* hoopdreamsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EBA652719F51B3F00C36ACC /* Build configuration list for PBXNativeTarget "hoopdreamsTests" */;
+			buildPhases = (
+				0EBA650F19F51B3F00C36ACC /* Sources */,
+				0EBA651019F51B3F00C36ACC /* Frameworks */,
+				0EBA651119F51B3F00C36ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0EBA651919F51B3F00C36ACC /* PBXTargetDependency */,
+			);
+			name = hoopdreamsTests;
+			productName = hoopdreamsTests;
+			productReference = 0EBA651319F51B3F00C36ACC /* hoopdreamsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0EBA64EA19F51B3F00C36ACC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = CS378Group6;
+				TargetAttributes = {
+					0EBA651219F51B3F00C36ACC = {
+						TestTargetID = 0EBA64F119F51B3F00C36ACC;
+					};
+				};
+			};
+			buildConfigurationList = 0EBA64ED19F51B3F00C36ACC /* Build configuration list for PBXProject "hoopdreams" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0EBA64E919F51B3F00C36ACC;
+			productRefGroup = 0EBA64F319F51B3F00C36ACC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EBA64F119F51B3F00C36ACC /* hoopdreams */,
+				0EBA651219F51B3F00C36ACC /* hoopdreamsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EBA64F019F51B3F00C36ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EBA650E19F51B3F00C36ACC /* Images.xcassets in Resources */,
+				0EBA653B19F51BB400C36ACC /* location_icon.png in Resources */,
+				0EBA653A19F51BB400C36ACC /* hand-reaching.png in Resources */,
+				0EBA653C19F51BB400C36ACC /* location-24-512.png in Resources */,
+				0EBA653819F51BB400C36ACC /* buddy_icon.png in Resources */,
+				0EBA650019F51B3F00C36ACC /* InfoPlist.strings in Resources */,
+				0EBA653619F51BB400C36ACC /* basketballhoop.png in Resources */,
+				0EBA653919F51BB400C36ACC /* hand-reaching.jpg in Resources */,
+				0EBA653719F51BB400C36ACC /* buddy_icon_white.png in Resources */,
+				0EBA653519F51BB400C36ACC /* basketball-court-floor.jpg in Resources */,
+				0EBA653D19F51BB400C36ACC /* settings.png in Resources */,
+				0EBA650919F51B3F00C36ACC /* Main.storyboard in Resources */,
+				0EBA653419F51BB400C36ACC /* arrow.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EBA651119F51B3F00C36ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EBA651F19F51B3F00C36ACC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EBA64EE19F51B3F00C36ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EBA650C19F51B3F00C36ACC /* HDViewController.m in Sources */,
+				0EBA650619F51B3F00C36ACC /* HDAppDelegate.m in Sources */,
+				0EBA650219F51B3F00C36ACC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EBA650F19F51B3F00C36ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EBA652119F51B3F00C36ACC /* hoopdreamsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EBA651919F51B3F00C36ACC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EBA64F119F51B3F00C36ACC /* hoopdreams */;
+			targetProxy = 0EBA651819F51B3F00C36ACC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0EBA64FE19F51B3F00C36ACC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EBA64FF19F51B3F00C36ACC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0EBA650719F51B3F00C36ACC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EBA650819F51B3F00C36ACC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0EBA651D19F51B3F00C36ACC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EBA651E19F51B3F00C36ACC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0EBA652219F51B3F00C36ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0EBA652319F51B3F00C36ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0EBA652519F51B3F00C36ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hoopdreams/hoopdreams-Prefix.pch";
+				INFOPLIST_FILE = "hoopdreams/hoopdreams-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0EBA652619F51B3F00C36ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hoopdreams/hoopdreams-Prefix.pch";
+				INFOPLIST_FILE = "hoopdreams/hoopdreams-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0EBA652819F51B3F00C36ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hoopdreams.app/hoopdreams";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hoopdreams/hoopdreams-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "hoopdreamsTests/hoopdreamsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0EBA652919F51B3F00C36ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hoopdreams.app/hoopdreams";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hoopdreams/hoopdreams-Prefix.pch";
+				INFOPLIST_FILE = "hoopdreamsTests/hoopdreamsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EBA64ED19F51B3F00C36ACC /* Build configuration list for PBXProject "hoopdreams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EBA652219F51B3F00C36ACC /* Debug */,
+				0EBA652319F51B3F00C36ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EBA652419F51B3F00C36ACC /* Build configuration list for PBXNativeTarget "hoopdreams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EBA652519F51B3F00C36ACC /* Debug */,
+				0EBA652619F51B3F00C36ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0EBA652719F51B3F00C36ACC /* Build configuration list for PBXNativeTarget "hoopdreamsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EBA652819F51B3F00C36ACC /* Debug */,
+				0EBA652919F51B3F00C36ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0EBA64EA19F51B3F00C36ACC /* Project object */;
+}
