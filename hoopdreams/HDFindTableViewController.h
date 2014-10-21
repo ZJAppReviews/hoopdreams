@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "HDDataModel.h"
+#import "HDAppDelegate.h"
+#import "HDTableViewCell.h"
 
-@interface HDFindTableViewController : UITableViewController
+@interface HDFindTableViewController : UITableViewController <CLLocationManagerDelegate>{
+    CLGeocoder *geocoder;
+    CLPlacemark *placemark;
+}
 
 @end

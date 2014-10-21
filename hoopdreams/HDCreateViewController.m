@@ -13,7 +13,9 @@
 
 @end
 
-@implementation HDCreateViewController
+@implementation HDCreateViewController{
+    CLLocation *latestLocation;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +30,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.nameTextField.delegate = self;
+    self.notesTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,9 +52,31 @@
 }
 */
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
 - (IBAction)submitButtonPressed:(id)sender {
     HDAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    [delegate.dataModel addNewGame:self.nameTextField.text andNotes:self.notesTextField.text andPeople:(int)self.spotsStepper.value];
+    
+    [delegate.dataModel addNewGame:self.nameTextField.text andNotes:self.notesTextField.text andPeople:self.spotsStepper.value atLocation:latestLocation];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)stepperChanged:(id)sender {
+    self.spotsLabel.text = [NSString stringWithFormat:@"%f spots", self.spotsStepper.value];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    latestLocation = [locations lastObject];
+    [manager stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 @end

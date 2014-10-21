@@ -12,7 +12,11 @@
 
 @end
 
-@implementation HDFindTableViewController
+@implementation HDFindTableViewController{
+    HDDataModel *dataModel;
+    CLLocationManager *locManager;
+    CLLocation *latestLocation;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +36,22 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    HDAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    dataModel = delegate.dataModel;
+    
+    geocoder = [[CLGeocoder alloc] init];
+    if (locManager == nil) {
+        locManager = [[CLLocationManager alloc] init];
+        locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        locManager.delegate = self;
+    }
+    
+    [locManager startUpdatingLocation];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +64,37 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [dataModel count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    HDTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    if (cell) {
+        NSArray *game = [dataModel getGame:indexPath.row];
+        cell.nameLabel.text = [game objectAtIndex:0];
+        cell.spotsLabel.text = [NSString stringWithFormat:@"%@ spots",[game objectAtIndex:2]];
+        
+        CLLocation *loc = (CLLocation *)[game objectAtIndex:3];
+        CLLocationDistance distance = [loc distanceFromLocation:latestLocation];
+        
+        cell.distanceLabel.text = [NSString stringWithFormat:@"%f meters", distance];
+        
+    }
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -115,5 +144,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    latestLocation = [locations lastObject];
+    [manager stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
+}
 
 @end

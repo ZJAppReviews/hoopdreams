@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HDCreateViewController : UIViewController
+@interface HDCreateViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *notesTextField;
@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIStepper *spotsStepper;
 
 - (IBAction)submitButtonPressed:(id)sender;
+- (IBAction)stepperChanged:(id)sender;
 
 @end

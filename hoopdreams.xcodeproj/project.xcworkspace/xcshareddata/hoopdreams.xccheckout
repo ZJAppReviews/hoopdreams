@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BF2CB68D-1550-4D0D-8B17-A0581D3F9D31</string>
+	<key>IDESourceControlProjectName</key>
+	<string>hoopdreams</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3345CAF47AC556072D05CB33B5B828CC3BB8493B</key>
+		<string>https://github.com/walidowais/hoopdreams.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>hoopdreams.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3345CAF47AC556072D05CB33B5B828CC3BB8493B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/walidowais/hoopdreams.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3345CAF47AC556072D05CB33B5B828CC3BB8493B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3345CAF47AC556072D05CB33B5B828CC3BB8493B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hoopdreams</string>
+		</dict>
+	</array>
+</dict>
+</plist>

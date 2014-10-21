@@ -7,7 +7,6 @@
 //
 
 #import "HDDataModel.h"
-#import <CoreLocation/CoreLocation.h>
 
 @implementation HDDataModel{
     NSMutableArray *data;
@@ -21,19 +20,25 @@
     
     if (self) {
         if (!data) {
-            data = [[NSMutableArray alloc] init];
+            data = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"data"]];
         }
     }
     
     return self;
 }
 
-- (void)addNewGame:(NSString *)name andNotes:(NSString *)notes andPeople:(int)spots atLocation:(CLLocation *)location{
+- (void)addNewGame:(NSString *)name andNotes:(NSString *)notes andPeople:(int)spots atLocation:(CLLocation *)location {
     [data addObject:@[name, notes, @(spots), location]];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"data"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (NSArray *)getGame:(int)index{
+- (NSArray *)getGame:(NSInteger)index {
     return [data objectAtIndex:index];
+}
+
+- (NSInteger)count {
+    return [data count];
 }
 
 @end
