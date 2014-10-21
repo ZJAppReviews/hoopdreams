@@ -7,6 +7,7 @@
 //
 
 #import "HDCreateViewController.h"
+#import "HDAppDelegate.h"
 
 @interface HDCreateViewController ()
 
@@ -47,5 +48,8 @@
 */
 
 - (IBAction)submitButtonPressed:(id)sender {
+    HDAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate.dataModel addNewGame:self.nameTextField.text andNotes:self.notesTextField.text andPeople:(int)self.spotsStepper.value];
 }
+
 @end

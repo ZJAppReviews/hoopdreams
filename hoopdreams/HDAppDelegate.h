@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HDDataModel.h"
 
 @interface HDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) HDDataModel *dataModel;
 
 @end
