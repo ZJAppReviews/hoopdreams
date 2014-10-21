@@ -7,6 +7,7 @@
 //
 
 #import "HDViewController.h"
+#import "HDFindTableViewController.h"
 
 @interface HDViewController ()
 

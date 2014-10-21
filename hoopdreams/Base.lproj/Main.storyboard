@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XCL-6V-Bio">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XCL-6V-Bio">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Root View Controller-->
+        <!--Find Table View Controller - Root View Controller-->
         <scene sceneID="Kgw-kz-ylP">
             <objects>
-                <tableViewController id="buC-Hw-eeq" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Find" id="buC-Hw-eeq" customClass="HDFindTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rsg-9j-dTg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="tYF-L0-EyQ">
-                                <rect key="frame" x="0.0" y="86" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tYF-L0-EyQ" id="M2L-eI-a4c">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
@@ -97,7 +97,7 @@
         <!--View Controller - RSVP-->
         <scene sceneID="alc-JC-3ix">
             <objects>
-                <viewController id="Fax-gV-aaL" sceneMemberID="viewController">
+                <viewController id="Fax-gV-aaL" customClass="HDRSVPViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MeG-bP-Mey"/>
                         <viewControllerLayoutGuide type="bottom" id="h4Y-sS-QsX"/>
@@ -128,6 +128,9 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitButtonPressed:" destination="Fax-gV-aaL" eventType="touchUpInside" id="QTA-Qo-OSe"/>
+                                        </connections>
                                     </button>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoK-OP-lGx">
                                         <rect key="frame" x="0.0" y="64" width="320" height="65"/>
@@ -179,15 +182,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="RSVP" id="Ihk-DP-hLE"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="NPx-EP-P5p" id="mNx-8Z-G1S"/>
+                        <outlet property="nameLabel" destination="XoK-OP-lGx" id="8Gv-5I-IZX"/>
+                        <outlet property="notesLabel" destination="REl-n1-Qx5" id="OXI-Ld-Y74"/>
+                        <outlet property="spotsLabel" destination="Axh-Br-a55" id="ZDl-g3-5uM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEu-Fg-dqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-76" y="-310"/>
         </scene>
-        <!--View Controller - Create-->
+        <!--Create View Controller - Create-->
         <scene sceneID="eCI-OI-pHM">
             <objects>
-                <viewController id="WZ2-ON-lJI" sceneMemberID="viewController">
+                <viewController id="WZ2-ON-lJI" customClass="HDCreateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J8d-Lz-X6b"/>
                         <viewControllerLayoutGuide type="bottom" id="WH8-gX-jRS"/>
@@ -218,6 +227,9 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitButtonPressed:" destination="WZ2-ON-lJI" eventType="touchUpInside" id="1Jj-6o-fIa"/>
+                                        </connections>
                                     </button>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Submit a New Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfZ-VL-PJV">
                                         <rect key="frame" x="0.0" y="64" width="320" height="65"/>
@@ -279,15 +291,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create" id="7Ou-bg-lLO"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="ZFh-k3-ITG" id="lrA-EO-bKs"/>
+                        <outlet property="notesTextField" destination="QAc-Vc-tLz" id="cc9-pq-Fn7"/>
+                        <outlet property="spotsLabel" destination="VPO-2F-fTo" id="Qv9-r4-11t"/>
+                        <outlet property="spotsStepper" destination="jF6-NZ-RAV" id="SI2-Ag-3Zb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4C-TZ-dqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-76" y="361"/>
         </scene>
-        <!--View Controller - Settings-->
+        <!--Settings View Controller - Settings-->
         <scene sceneID="hjU-Mz-a3p">
             <objects>
-                <viewController id="Lke-cN-JFV" sceneMemberID="viewController">
+                <viewController id="Lke-cN-JFV" customClass="HDSettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p9O-lk-Sr4"/>
                         <viewControllerLayoutGuide type="bottom" id="Dt3-Y9-1Qk"/>
@@ -369,6 +387,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="1mT-Ia-3aU"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="WKl-Ut-zie" id="zqs-1O-5Z5"/>
+                        <outlet property="distanceSlider" destination="rfH-0d-B0r" id="VcX-S5-K9f"/>
+                        <outlet property="spotsLabel" destination="Lr2-Sk-aVM" id="IoZ-3P-Dht"/>
+                        <outlet property="spotsSlider" destination="w46-fA-jC3" id="wHu-Jo-HyD"/>
+                        <outlet property="submitButtonPressed" destination="lb4-ZQ-Ahp" id="ldd-Ae-mF3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVi-TT-mjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,7 +402,7 @@
         <!--View Controller-->
         <scene sceneID="5Co-HR-2wX">
             <objects>
-                <viewController id="DAl-zW-pK8" sceneMemberID="viewController">
+                <viewController id="DAl-zW-pK8" customClass="HDViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="viN-L3-61D"/>
                         <viewControllerLayoutGuide type="bottom" id="wAQ-pQ-zHP"/>
@@ -424,18 +449,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdG-Bv-YIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1075" y="-1014"/>
+            <point key="canvasLocation" x="-1535" y="-310"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T7t-n5-Xh0">
             <objects>
-                <navigationController definesPresentationContext="YES" id="XCL-6V-Bio" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav" definesPresentationContext="YES" id="XCL-6V-Bio" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BQU-Ud-di8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tnq-ga-yfu">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="buC-Hw-eeq" kind="relationship" relationship="rootViewController" id="MAK-Tk-mvy"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53y-6i-ixV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
