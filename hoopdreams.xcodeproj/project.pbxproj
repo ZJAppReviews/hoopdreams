@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E265ACB19F71FCE003E22C5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E265ACA19F71FCE003E22C5 /* README.txt */; };
 		0E36A8E319F69F42003B227A /* HDCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8E219F69F42003B227A /* HDCreateViewController.m */; };
 		0E36A8E419F69F42003B227A /* HDCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8E219F69F42003B227A /* HDCreateViewController.m */; };
 		0E36A8E719F69F4F003B227A /* HDSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8E619F69F4F003B227A /* HDSettingsViewController.m */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E265ACA19F71FCE003E22C5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		0E36A8E119F69F42003B227A /* HDCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDCreateViewController.h; sourceTree = "<group>"; };
 		0E36A8E219F69F42003B227A /* HDCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDCreateViewController.m; sourceTree = "<group>"; };
 		0E36A8E519F69F4F003B227A /* HDSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSettingsViewController.h; sourceTree = "<group>"; };
@@ -156,9 +158,10 @@
 		0EBA64FB19F51B3F00C36ACC /* hoopdreams */ = {
 			isa = PBXGroup;
 			children = (
+				0E265ACA19F71FCE003E22C5 /* README.txt */,
+				0EBA650719F51B3F00C36ACC /* Main.storyboard */,
 				0EBA650419F51B3F00C36ACC /* HDAppDelegate.h */,
 				0EBA650519F51B3F00C36ACC /* HDAppDelegate.m */,
-				0EBA650719F51B3F00C36ACC /* Main.storyboard */,
 				0EBA650A19F51B3F00C36ACC /* HDViewController.h */,
 				0EBA650B19F51B3F00C36ACC /* HDViewController.m */,
 				0E36A8ED19F69FD9003B227A /* HDFindTableViewController.h */,
@@ -306,6 +309,7 @@
 				0EBA650E19F51B3F00C36ACC /* Images.xcassets in Resources */,
 				0EBA653B19F51BB400C36ACC /* location_icon.png in Resources */,
 				0EBA653A19F51BB400C36ACC /* hand-reaching.png in Resources */,
+				0E265ACB19F71FCE003E22C5 /* README.txt in Resources */,
 				0EBA653C19F51BB400C36ACC /* location-24-512.png in Resources */,
 				0EBA653819F51BB400C36ACC /* buddy_icon.png in Resources */,
 				0EBA650019F51B3F00C36ACC /* InfoPlist.strings in Resources */,

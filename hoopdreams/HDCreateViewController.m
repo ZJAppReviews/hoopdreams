@@ -66,7 +66,7 @@
 }
 
 - (IBAction)stepperChanged:(id)sender {
-    self.spotsLabel.text = [NSString stringWithFormat:@"%f spots", self.spotsStepper.value];
+    self.spotsLabel.text = [NSString stringWithFormat:@"%d spots", (int)self.spotsStepper.value];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
