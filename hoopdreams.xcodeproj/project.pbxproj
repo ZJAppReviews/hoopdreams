@@ -16,10 +16,25 @@
 		0E36A8EC19F69F64003B227A /* HDRSVPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8EA19F69F64003B227A /* HDRSVPViewController.m */; };
 		0E36A8EF19F69FD9003B227A /* HDFindTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8EE19F69FD9003B227A /* HDFindTableViewController.m */; };
 		0E36A8F019F69FD9003B227A /* HDFindTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8EE19F69FD9003B227A /* HDFindTableViewController.m */; };
-		0E36A8F319F6A04D003B227A /* HDDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8F219F6A04D003B227A /* HDDataModel.m */; };
-		0E36A8F419F6A04D003B227A /* HDDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8F219F6A04D003B227A /* HDDataModel.m */; };
 		0E36A8F719F6AEAD003B227A /* HDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8F619F6AEAD003B227A /* HDTableViewCell.m */; };
 		0E36A8F819F6AEAD003B227A /* HDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36A8F619F6AEAD003B227A /* HDTableViewCell.m */; };
+		0E8CCD0B1A14042E006FF123 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD071A14042E006FF123 /* Bolts.framework */; };
+		0E8CCD0C1A14042E006FF123 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD071A14042E006FF123 /* Bolts.framework */; };
+		0E8CCD0D1A14042E006FF123 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD081A14042E006FF123 /* Parse.framework */; };
+		0E8CCD0E1A14042E006FF123 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD081A14042E006FF123 /* Parse.framework */; };
+		0E8CCD0F1A14042E006FF123 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD091A14042E006FF123 /* ParseFacebookUtils.framework */; };
+		0E8CCD101A14042E006FF123 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD091A14042E006FF123 /* ParseFacebookUtils.framework */; };
+		0E8CCD111A14042E006FF123 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD0A1A14042E006FF123 /* ParseUI.framework */; };
+		0E8CCD121A14042E006FF123 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD0A1A14042E006FF123 /* ParseUI.framework */; };
+		0E8CCD141A14045B006FF123 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD131A14045A006FF123 /* AudioToolbox.framework */; };
+		0E8CCD161A140463006FF123 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD151A140463006FF123 /* CFNetwork.framework */; };
+		0E8CCD181A140475006FF123 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD171A140475006FF123 /* CoreLocation.framework */; };
+		0E8CCD1A1A140483006FF123 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD191A140483006FF123 /* libz.dylib */; };
+		0E8CCD1C1A14048A006FF123 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD1B1A14048A006FF123 /* MobileCoreServices.framework */; };
+		0E8CCD1E1A140491006FF123 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD1D1A140491006FF123 /* QuartzCore.framework */; };
+		0E8CCD201A14049A006FF123 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD1F1A14049A006FF123 /* Security.framework */; };
+		0E8CCD221A1404A1006FF123 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD211A1404A1006FF123 /* StoreKit.framework */; };
+		0E8CCD241A1404AA006FF123 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8CCD231A1404AA006FF123 /* SystemConfiguration.framework */; };
 		0EBA64F619F51B3F00C36ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA64F519F51B3F00C36ACC /* Foundation.framework */; };
 		0EBA64F819F51B3F00C36ACC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA64F719F51B3F00C36ACC /* CoreGraphics.framework */; };
 		0EBA64FA19F51B3F00C36ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBA64F919F51B3F00C36ACC /* UIKit.framework */; };
@@ -66,10 +81,21 @@
 		0E36A8EA19F69F64003B227A /* HDRSVPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRSVPViewController.m; sourceTree = "<group>"; };
 		0E36A8ED19F69FD9003B227A /* HDFindTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDFindTableViewController.h; sourceTree = "<group>"; };
 		0E36A8EE19F69FD9003B227A /* HDFindTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDFindTableViewController.m; sourceTree = "<group>"; };
-		0E36A8F119F6A04D003B227A /* HDDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDataModel.h; sourceTree = "<group>"; };
-		0E36A8F219F6A04D003B227A /* HDDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDataModel.m; sourceTree = "<group>"; };
 		0E36A8F519F6AEAD003B227A /* HDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewCell.h; sourceTree = "<group>"; };
 		0E36A8F619F6AEAD003B227A /* HDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewCell.m; sourceTree = "<group>"; };
+		0E8CCD071A14042E006FF123 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0E8CCD081A14042E006FF123 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0E8CCD091A14042E006FF123 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		0E8CCD0A1A14042E006FF123 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		0E8CCD131A14045A006FF123 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0E8CCD151A140463006FF123 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0E8CCD171A140475006FF123 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0E8CCD191A140483006FF123 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0E8CCD1B1A14048A006FF123 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0E8CCD1D1A140491006FF123 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0E8CCD1F1A14049A006FF123 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0E8CCD211A1404A1006FF123 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0E8CCD231A1404AA006FF123 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0EBA64F219F51B3F00C36ACC /* hoopdreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hoopdreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBA64F519F51B3F00C36ACC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0EBA64F719F51B3F00C36ACC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,9 +132,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8CCD241A1404AA006FF123 /* SystemConfiguration.framework in Frameworks */,
+				0E8CCD221A1404A1006FF123 /* StoreKit.framework in Frameworks */,
+				0E8CCD201A14049A006FF123 /* Security.framework in Frameworks */,
+				0E8CCD1E1A140491006FF123 /* QuartzCore.framework in Frameworks */,
+				0E8CCD1C1A14048A006FF123 /* MobileCoreServices.framework in Frameworks */,
+				0E8CCD1A1A140483006FF123 /* libz.dylib in Frameworks */,
+				0E8CCD181A140475006FF123 /* CoreLocation.framework in Frameworks */,
 				0EBA64F819F51B3F00C36ACC /* CoreGraphics.framework in Frameworks */,
+				0E8CCD161A140463006FF123 /* CFNetwork.framework in Frameworks */,
+				0E8CCD141A14045B006FF123 /* AudioToolbox.framework in Frameworks */,
 				0EBA64FA19F51B3F00C36ACC /* UIKit.framework in Frameworks */,
+				0E8CCD111A14042E006FF123 /* ParseUI.framework in Frameworks */,
+				0E8CCD0F1A14042E006FF123 /* ParseFacebookUtils.framework in Frameworks */,
 				0EBA64F619F51B3F00C36ACC /* Foundation.framework in Frameworks */,
+				0E8CCD0B1A14042E006FF123 /* Bolts.framework in Frameworks */,
+				0E8CCD0D1A14042E006FF123 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +157,11 @@
 			files = (
 				0EBA651519F51B3F00C36ACC /* XCTest.framework in Frameworks */,
 				0EBA651719F51B3F00C36ACC /* UIKit.framework in Frameworks */,
+				0E8CCD121A14042E006FF123 /* ParseUI.framework in Frameworks */,
+				0E8CCD101A14042E006FF123 /* ParseFacebookUtils.framework in Frameworks */,
 				0EBA651619F51B3F00C36ACC /* Foundation.framework in Frameworks */,
+				0E8CCD0C1A14042E006FF123 /* Bolts.framework in Frameworks */,
+				0E8CCD0E1A14042E006FF123 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +190,19 @@
 		0EBA64F419F51B3F00C36ACC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E8CCD231A1404AA006FF123 /* SystemConfiguration.framework */,
+				0E8CCD211A1404A1006FF123 /* StoreKit.framework */,
+				0E8CCD1F1A14049A006FF123 /* Security.framework */,
+				0E8CCD1D1A140491006FF123 /* QuartzCore.framework */,
+				0E8CCD1B1A14048A006FF123 /* MobileCoreServices.framework */,
+				0E8CCD191A140483006FF123 /* libz.dylib */,
+				0E8CCD171A140475006FF123 /* CoreLocation.framework */,
+				0E8CCD151A140463006FF123 /* CFNetwork.framework */,
+				0E8CCD131A14045A006FF123 /* AudioToolbox.framework */,
+				0E8CCD071A14042E006FF123 /* Bolts.framework */,
+				0E8CCD081A14042E006FF123 /* Parse.framework */,
+				0E8CCD091A14042E006FF123 /* ParseFacebookUtils.framework */,
+				0E8CCD0A1A14042E006FF123 /* ParseUI.framework */,
 				0EBA64F519F51B3F00C36ACC /* Foundation.framework */,
 				0EBA64F719F51B3F00C36ACC /* CoreGraphics.framework */,
 				0EBA64F919F51B3F00C36ACC /* UIKit.framework */,
@@ -174,8 +230,6 @@
 				0E36A8EA19F69F64003B227A /* HDRSVPViewController.m */,
 				0E36A8F519F6AEAD003B227A /* HDTableViewCell.h */,
 				0E36A8F619F6AEAD003B227A /* HDTableViewCell.m */,
-				0E36A8F119F6A04D003B227A /* HDDataModel.h */,
-				0E36A8F219F6A04D003B227A /* HDDataModel.m */,
 				0EBA653E19F51BBB00C36ACC /* images */,
 				0EBA650D19F51B3F00C36ACC /* Images.xcassets */,
 				0EBA64FC19F51B3F00C36ACC /* Supporting Files */,
@@ -346,7 +400,6 @@
 				0E36A8EB19F69F64003B227A /* HDRSVPViewController.m in Sources */,
 				0EBA650619F51B3F00C36ACC /* HDAppDelegate.m in Sources */,
 				0EBA650219F51B3F00C36ACC /* main.m in Sources */,
-				0E36A8F319F6A04D003B227A /* HDDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +411,6 @@
 				0E36A8E819F69F4F003B227A /* HDSettingsViewController.m in Sources */,
 				0E36A8F019F69FD9003B227A /* HDFindTableViewController.m in Sources */,
 				0E36A8F819F6AEAD003B227A /* HDTableViewCell.m in Sources */,
-				0E36A8F419F6A04D003B227A /* HDDataModel.m in Sources */,
 				0E36A8E419F69F42003B227A /* HDCreateViewController.m in Sources */,
 				0E36A8EC19F69F64003B227A /* HDRSVPViewController.m in Sources */,
 			);
@@ -477,6 +529,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hoopdreams/hoopdreams-Prefix.pch";
 				INFOPLIST_FILE = "hoopdreams/hoopdreams-Info.plist";
@@ -490,6 +546,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hoopdreams/hoopdreams-Prefix.pch";
 				INFOPLIST_FILE = "hoopdreams/hoopdreams-Info.plist";
@@ -506,6 +566,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hoopdreams/hoopdreams-Prefix.pch";
@@ -528,6 +589,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hoopdreams/hoopdreams-Prefix.pch";

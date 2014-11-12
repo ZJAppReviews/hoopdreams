@@ -30,6 +30,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (!self.locationManager) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        [self.locationManager startUpdatingLocation];
+    }
     
     self.nameTextField.delegate = self;
     self.notesTextField.delegate = self;
@@ -59,9 +66,32 @@
 }
 
 - (IBAction)submitButtonPressed:(id)sender {
-    HDAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+//    HDAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+//    
+//    [delegate.dataModel addNewGame:self.nameTextField.text andNotes:self.notesTextField.text andPeople:self.spotsStepper.value atLocation:latestLocation];
+    if (self.nameTextField.text == nil || [self.nameTextField.text length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Name cannot be left blank." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
     
-    [delegate.dataModel addNewGame:self.nameTextField.text andNotes:self.notesTextField.text andPeople:self.spotsStepper.value atLocation:latestLocation];
+    if (self.notesTextField.text == nil) {
+        self.notesTextField.text = @"";
+    }
+    
+    if (latestLocation == nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    PFObject *game = [PFObject objectWithClassName:@"Game"];
+    PFGeoPoint *geopoint = [PFGeoPoint geoPointWithLatitude:latestLocation.coordinate.latitude longitude:latestLocation.coordinate.longitude];
+    game[@"location"] = geopoint;
+    game[@"name"] = self.nameTextField.text;
+    game[@"notes"] = self.notesTextField.text;
+    game[@"spots"] = @(self.spotsStepper.value);
+    
+    [game saveInBackground];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -75,7 +105,7 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 

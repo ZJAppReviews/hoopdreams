@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <Parse/Parse.h>
 
-@interface HDCreateViewController : UIViewController <UITextFieldDelegate>
+@interface HDCreateViewController : UIViewController <UITextFieldDelegate, CLLocationManagerDelegate>
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *notesTextField;

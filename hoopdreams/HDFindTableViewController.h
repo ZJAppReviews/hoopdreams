@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "HDDataModel.h"
 #import "HDAppDelegate.h"
 #import "HDTableViewCell.h"
+#import <Parse/Parse.h>
 
 @interface HDFindTableViewController : UITableViewController <CLLocationManagerDelegate>{
     CLGeocoder *geocoder;

@@ -13,9 +13,10 @@
 @end
 
 @implementation HDFindTableViewController{
-    HDDataModel *dataModel;
     CLLocationManager *locManager;
     CLLocation *latestLocation;
+    
+    NSArray *objects;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -37,9 +38,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    HDAppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    dataModel = delegate.dataModel;
-    
     geocoder = [[CLGeocoder alloc] init];
     if (locManager == nil) {
         locManager = [[CLLocationManager alloc] init];
@@ -51,6 +49,15 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    PFGeoPoint *geopoint = [PFGeoPoint geoPointWithLatitude:latestLocation.coordinate.latitude longitude:latestLocation.coordinate.longitude];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Game"];
+    [query whereKey:@"location" nearGeoPoint:geopoint withinMiles:1000.0];
+    
+    objects = [query findObjects];
+    
     [self.tableView reloadData];
 }
 
@@ -71,7 +78,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [dataModel count];
+    return [objects count];
 }
 
 
@@ -81,15 +88,16 @@
     
     // Configure the cell...
     if (cell) {
-        NSArray *game = [dataModel getGame:indexPath.row];
-        cell.nameLabel.text = [game objectAtIndex:0];
-        cell.spotsLabel.text = [NSString stringWithFormat:@"%@ spots",[game objectAtIndex:2]];
-        
-        CLLocation *loc = (CLLocation *)[game objectAtIndex:3];
-        CLLocationDistance distance = [loc distanceFromLocation:latestLocation];
-        
-        cell.distanceLabel.text = [NSString stringWithFormat:@"%f meters", distance];
-        
+        PFObject *game = [objects objectAtIndex:indexPath.row];
+        cell.nameLabel.text = [game objectForKey:@"name"];
+        cell.spotsLabel.text = [[game objectForKey:@"spots"] stringValue];
+//        cell.nameLabel.text = [game objectAtIndex:0];
+//        cell.spotsLabel.text = [NSString stringWithFormat:@"%@ spots",[game objectAtIndex:2]];
+//        
+//        CLLocation *loc = (CLLocation *)[game objectAtIndex:3];
+//        CLLocationDistance distance = [loc distanceFromLocation:latestLocation];
+//        
+//        cell.distanceLabel.text = [NSString stringWithFormat:@"%f meters", distance];
     }
     
     return cell;
