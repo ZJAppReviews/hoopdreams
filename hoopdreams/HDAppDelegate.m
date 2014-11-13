@@ -14,6 +14,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.settingDistance = 20.0;
+    self.settingSpots = 5.0;
+    
     [Parse setApplicationId:@"LArBOadZXxkKOCsZxBWgFPk6hjScYtlTfTZPWOEw"
                   clientKey:@"94ljYYSJCRrbNiGWsMlE3fFOVASQSeCZlzGL9rgm"];
     

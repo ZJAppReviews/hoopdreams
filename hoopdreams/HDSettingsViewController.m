@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    HDAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+    self.distanceSlider.value = delegate.settingDistance;
+    self.distanceLabel.text = [NSString stringWithFormat:@"%d miles", (int)self.distanceSlider.value];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +49,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)distanceValueChanged:(id)sender {
+    self.distanceLabel.text = [NSString stringWithFormat:@"%d miles", (int)self.distanceSlider.value];
+}
+
+- (IBAction)donePressed:(id)sender {
+    HDAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+    delegate.settingDistance = self.distanceSlider.value;
+    delegate.settingSpots = self.gameSize.selectedSegmentIndex;
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end

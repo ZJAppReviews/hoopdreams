@@ -95,10 +95,10 @@
             game[@"spots"] = @(self.spotsStepper.value);
             
             [game saveInBackground];
+			
+			[self.navigationController popViewControllerAnimated:YES];
         }
     }
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)stepperChanged:(id)sender {
@@ -111,8 +111,8 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//    [alert show];
 }
 
 @end

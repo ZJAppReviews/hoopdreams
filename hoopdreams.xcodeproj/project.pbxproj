@@ -74,7 +74,7 @@
 /* Begin PBXFileReference section */
 		0E265ACA19F71FCE003E22C5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		0E36A8E119F69F42003B227A /* HDCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDCreateViewController.h; sourceTree = "<group>"; };
-		0E36A8E219F69F42003B227A /* HDCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDCreateViewController.m; sourceTree = "<group>"; };
+		0E36A8E219F69F42003B227A /* HDCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDCreateViewController.m; sourceTree = "<group>"; usesTabs = 1; };
 		0E36A8E519F69F4F003B227A /* HDSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSettingsViewController.h; sourceTree = "<group>"; };
 		0E36A8E619F69F4F003B227A /* HDSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDSettingsViewController.m; sourceTree = "<group>"; };
 		0E36A8E919F69F64003B227A /* HDRSVPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRSVPViewController.h; sourceTree = "<group>"; };

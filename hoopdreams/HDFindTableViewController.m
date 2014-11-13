@@ -84,13 +84,12 @@
         PFObject *game = [objects objectAtIndex:indexPath.row];
         cell.nameLabel.text = [game objectForKey:@"name"];
         cell.spotsLabel.text = [[game objectForKey:@"spots"] stringValue];
-//        cell.nameLabel.text = [game objectAtIndex:0];
-//        cell.spotsLabel.text = [NSString stringWithFormat:@"%@ spots",[game objectAtIndex:2]];
-//        
-//        CLLocation *loc = (CLLocation *)[game objectAtIndex:3];
-//        CLLocationDistance distance = [loc distanceFromLocation:latestLocation];
-//        
-//        cell.distanceLabel.text = [NSString stringWithFormat:@"%f meters", distance];
+        
+        PFGeoPoint *geopoint = [game objectForKey:@"location"];
+        CLLocation *gameLocation = [[CLLocation alloc] initWithLatitude:geopoint.latitude longitude:geopoint.longitude];
+        
+        CLLocationDistance distance = [gameLocation distanceFromLocation:latestLocation];
+        cell.distanceLabel.text = [NSString stringWithFormat:@"%.1f mi", (distance*0.000621371)];
     }
     
     return cell;
@@ -161,10 +160,31 @@
 - (void)update{
     PFGeoPoint *geopoint = [PFGeoPoint geoPointWithLatitude:latestLocation.coordinate.latitude longitude:latestLocation.coordinate.longitude];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Game"];
-    [query whereKey:@"location" nearGeoPoint:geopoint withinMiles:1000.0];
+    HDAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     
-    objects = [query findObjects];
+    PFQuery *queryDistance = [PFQuery queryWithClassName:@"Game"];
+    [queryDistance whereKey:@"location" nearGeoPoint:geopoint withinMiles:delegate.settingDistance];
+    
+//    PFQuery *querySize = [PFQuery queryWithClassName:@"Game"];
+//    switch (delegate.settingSpots) {
+//        case 0:
+//            [querySize whereKey:@"spots" lessThanOrEqualTo:@2];
+//            break;
+//        
+//        case 1:
+//            [querySize whereKey:@"spots" equalTo:@3];
+//            break;
+//        
+//        case 2:
+//            [querySize whereKey:@"spots" greaterThanOrEqualTo:@4];
+//            break;
+//            
+//        default:
+//            break;
+//    }
+//    
+//    PFQuery *query = [PFQuery orQueryWithSubqueries:@[queryDistance, querySize]];
+    objects = [queryDistance findObjects];
     
     [self.tableView reloadData];
 }
