@@ -30,6 +30,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.spotsLabel.text = [NSString stringWithFormat:@"%d", (int)self.spotsStepper.value];
+    
+    
     if (!self.locationManager) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
@@ -73,30 +76,33 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Name cannot be left blank." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
+    else{
     
-    if (self.notesTextField.text == nil) {
-        self.notesTextField.text = @"";
+        if (self.notesTextField.text == nil) {
+            self.notesTextField.text = @"";
+        }
+        
+        if (latestLocation == nil) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        else {
+            PFObject *game = [PFObject objectWithClassName:@"Game"];
+            PFGeoPoint *geopoint = [PFGeoPoint geoPointWithLatitude:latestLocation.coordinate.latitude longitude:latestLocation.coordinate.longitude];
+            game[@"location"] = geopoint;
+            game[@"name"] = self.nameTextField.text;
+            game[@"notes"] = self.notesTextField.text;
+            game[@"spots"] = @(self.spotsStepper.value);
+            
+            [game saveInBackground];
+        }
     }
-    
-    if (latestLocation == nil) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-    }
-    
-    PFObject *game = [PFObject objectWithClassName:@"Game"];
-    PFGeoPoint *geopoint = [PFGeoPoint geoPointWithLatitude:latestLocation.coordinate.latitude longitude:latestLocation.coordinate.longitude];
-    game[@"location"] = geopoint;
-    game[@"name"] = self.nameTextField.text;
-    game[@"notes"] = self.notesTextField.text;
-    game[@"spots"] = @(self.spotsStepper.value);
-    
-    [game saveInBackground];
     
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)stepperChanged:(id)sender {
-    self.spotsLabel.text = [NSString stringWithFormat:@"%d spots", (int)self.spotsStepper.value];
+    self.spotsLabel.text = [NSString stringWithFormat:@"%d", (int)self.spotsStepper.value];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {

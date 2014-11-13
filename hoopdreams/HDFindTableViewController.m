@@ -51,14 +51,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    PFGeoPoint *geopoint = [PFGeoPoint geoPointWithLatitude:latestLocation.coordinate.latitude longitude:latestLocation.coordinate.longitude];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Game"];
-    [query whereKey:@"location" nearGeoPoint:geopoint withinMiles:1000.0];
-    
-    objects = [query findObjects];
-    
-    [self.tableView reloadData];
+    [self update];
 }
 
 - (void)didReceiveMemoryWarning
@@ -155,12 +148,25 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     latestLocation = [locations lastObject];
-    [manager stopUpdatingLocation];
+    
+    [self update];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:@"There was an error detecting your location. Turn on location services in settings." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     [alert show];
+}
+
+
+- (void)update{
+    PFGeoPoint *geopoint = [PFGeoPoint geoPointWithLatitude:latestLocation.coordinate.latitude longitude:latestLocation.coordinate.longitude];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Game"];
+    [query whereKey:@"location" nearGeoPoint:geopoint withinMiles:1000.0];
+    
+    objects = [query findObjects];
+    
+    [self.tableView reloadData];
 }
 
 @end
