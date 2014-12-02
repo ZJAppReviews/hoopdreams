@@ -11,6 +11,7 @@
 #import "HDAppDelegate.h"
 #import "HDTableViewCell.h"
 #import <Parse/Parse.h>
+#import "HDRSVPViewController.h"
 
 @interface HDFindTableViewController : UITableViewController <CLLocationManagerDelegate>{
     CLGeocoder *geocoder;

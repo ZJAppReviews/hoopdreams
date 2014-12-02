@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface HDTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) PFObject *game;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *spotsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
