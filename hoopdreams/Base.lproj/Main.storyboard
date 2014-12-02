@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XCL-6V-Bio">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XCL-6V-Bio">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Find Table View Controller - Find-->
+        <!--Find-->
         <scene sceneID="Kgw-kz-ylP">
             <objects>
                 <tableViewController storyboardIdentifier="Find" id="buC-Hw-eeq" customClass="HDFindTableViewController" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                                     <outlet property="distanceLabel" destination="RM9-cI-eal" id="zYk-uP-kiN"/>
                                     <outlet property="nameLabel" destination="lbS-8Q-X2l" id="Typ-Ok-ZzS"/>
                                     <outlet property="spotsLabel" destination="bkF-S7-PLs" id="17c-K1-SPe"/>
-                                    <segue destination="Fax-gV-aaL" kind="push" id="ne5-9q-9Or"/>
+                                    <segue destination="Fax-gV-aaL" kind="push" identifier="RSVP" id="ne5-9q-9Or"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="-611" y="-310"/>
         </scene>
-        <!--View Controller - RSVP-->
+        <!--RSVP-->
         <scene sceneID="alc-JC-3ix">
             <objects>
                 <viewController id="Fax-gV-aaL" customClass="HDRSVPViewController" sceneMemberID="viewController">
@@ -177,7 +177,7 @@
             </objects>
             <point key="canvasLocation" x="-76" y="-310"/>
         </scene>
-        <!--Create View Controller - Create-->
+        <!--Create-->
         <scene sceneID="eCI-OI-pHM">
             <objects>
                 <viewController id="WZ2-ON-lJI" customClass="HDCreateViewController" sceneMemberID="viewController">
@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="-76" y="361"/>
         </scene>
-        <!--Settings View Controller - Settings-->
+        <!--Settings-->
         <scene sceneID="hjU-Mz-a3p">
             <objects>
                 <viewController id="Lke-cN-JFV" customClass="HDSettingsViewController" sceneMemberID="viewController">
@@ -341,9 +341,8 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r8t-xS-6vY">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r8t-xS-6vY">
                                         <rect key="frame" x="20" y="367" width="280" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <segments>
                                             <segment title="Any"/>

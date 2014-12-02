@@ -100,20 +100,24 @@
 
 //#pragma mark - Navigation
 
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//    
-//    if ([segue.identifier isEqualToString:@"RSVP"]) {
-//        HDRSVPViewController *rsvpVC = segue.destinationViewController;
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        PFObject *selected = [objects objectAtIndex:indexPath.row];
-//        
-//        rsvpVC.game = selected;
-//    }
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"RSVP"]) {
+        
+        NSLog(@"RSVP Segue\n");
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PFObject *selected = [objects objectAtIndex:indexPath.row];
+        NSLog(@"prepareForSegue RSVP: selected %@\n", selected);
+        [[segue destinationViewController] setGame:selected];
+        NSLog(@"prepareForSegue RSVP: setGame complete");
+        
+    }
+}
 
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
