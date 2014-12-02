@@ -56,5 +56,17 @@
 */
 
 - (IBAction)submitButtonPressed:(id)sender {
+    Class mapItemClass = [MKMapItem class];
+    
+    if (mapItemClass && [mapItemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {
+        PFGeoPoint *geopoint = [_game objectForKey:@"location"];
+        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([geopoint latitude], [geopoint longitude]);
+        MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
+        MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+        [mapItem setName:[_game objectForKey:@"name"]];
+        
+        [mapItem openInMapsWithLaunchOptions:nil];
+    }
 }
+
 @end
