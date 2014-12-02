@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+#define kGameSizeAny 0
+#define kGameSizeSmall 1
+#define kGameSizeMedium 2
+#define kGameSizeLarge 3
+
 @interface HDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic) int settingSpots;
+@property (nonatomic) long settingSpots;
 @property (nonatomic) float settingDistance;
 
 @end

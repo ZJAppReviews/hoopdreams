@@ -29,6 +29,7 @@
     // Do any additional setup after loading the view.
     HDAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     
+    self.gameSize.selectedSegmentIndex = delegate.settingSpots;
     self.distanceSlider.value = delegate.settingDistance;
     self.distanceLabel.text = [NSString stringWithFormat:@"%d miles", (int)self.distanceSlider.value];
 }

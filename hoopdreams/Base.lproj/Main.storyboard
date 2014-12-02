@@ -346,6 +346,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <segments>
+                                            <segment title="Any"/>
                                             <segment title="Small"/>
                                             <segment title="Medium"/>
                                             <segment title="Large"/>

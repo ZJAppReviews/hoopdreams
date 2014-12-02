@@ -90,7 +90,7 @@
         CLLocation *gameLocation = [[CLLocation alloc] initWithLatitude:geopoint.latitude longitude:geopoint.longitude];
         
         CLLocationDistance distance = [gameLocation distanceFromLocation:latestLocation];
-        cell.distanceLabel.text = [NSString stringWithFormat:@"%.1f mi", (distance*0.000621371)];
+        cell.distanceLabel.text = [NSString stringWithFormat:@"%.1f mi", ABS((distance*0.000621371))];
     }
     
     return cell;
@@ -136,26 +136,42 @@
     PFQuery *queryDistance = [PFQuery queryWithClassName:@"Game"];
     [queryDistance whereKey:@"location" nearGeoPoint:geopoint withinMiles:delegate.settingDistance];
     
-//    PFQuery *querySize = [PFQuery queryWithClassName:@"Game"];
-//    switch (delegate.settingSpots) {
-//        case 0:
-//            [querySize whereKey:@"spots" lessThanOrEqualTo:@2];
-//            break;
-//        
-//        case 1:
-//            [querySize whereKey:@"spots" equalTo:@3];
-//            break;
-//        
-//        case 2:
-//            [querySize whereKey:@"spots" greaterThanOrEqualTo:@4];
-//            break;
-//            
-//        default:
-//            break;
-//    }
-//    
-//    PFQuery *query = [PFQuery orQueryWithSubqueries:@[queryDistance, querySize]];
     objects = [queryDistance findObjects];
+    
+    NSMutableArray *filtered = [[NSMutableArray alloc] init];
+    for (PFObject *PFobj in objects) {
+        int spots = [[PFobj objectForKey:@"spots"] intValue];
+        
+        switch (delegate.settingSpots) {
+            case kGameSizeAny:
+                [filtered addObject:PFobj];
+                break;
+                
+            case kGameSizeSmall:
+                if (spots < 3) {
+                    [filtered addObject:PFobj];
+                }
+                break;
+                
+            case kGameSizeMedium:
+                if (spots == 3) {
+                    [filtered addObject:PFobj];
+                }
+                break;
+                
+            case kGameSizeLarge:
+                if (spots > 3) {
+                    [filtered addObject:PFobj];
+                }
+                break;
+                
+            default:
+                NSLog(@"Invalid game size setting.");
+                break;
+        }
+    }
+    
+    objects = filtered;
     
     [self.tableView reloadData];
 }
