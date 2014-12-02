@@ -110,11 +110,13 @@
     if ([segue.identifier isEqualToString:@"RSVP"]) {
         
         NSLog(@"RSVP Segue\n");
+        HDRSVPViewController *vc = [segue destinationViewController];
+        
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         PFObject *selected = [objects objectAtIndex:indexPath.row];
-        NSLog(@"prepareForSegue RSVP: selected %@\n", selected);
-        [[segue destinationViewController] setGame:selected];
-        NSLog(@"prepareForSegue RSVP: setGame complete");
+        
+        [vc setGame:selected];
+        [vc setLatestLocation:latestLocation];
         
     }
 }

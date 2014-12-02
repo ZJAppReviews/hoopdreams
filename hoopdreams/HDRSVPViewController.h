@@ -12,6 +12,7 @@
 @interface HDRSVPViewController : UIViewController
 
 @property (strong, nonatomic) PFObject *game;
+@property (strong, nonatomic) CLLocation *latestLocation;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
