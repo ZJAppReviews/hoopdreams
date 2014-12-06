@@ -3,6 +3,9 @@ Jeremy Bouzigard (EID: jdb2999)
 Edgar Treto (EID: et6482)
 Walid Owais (EID: wo783)
 
+Final Notes:
+- Games with available spots are viewable on the Find screen for up to two weeks after their last updates. This long duration of availability is only for testing purposes and can easily be modified using a macro in the HDFindTableViewController.
+
 Beta Notes:
 - Tips for execution: on simulator set Debug > Location > Apple
 - Integrated Parse for backend data.

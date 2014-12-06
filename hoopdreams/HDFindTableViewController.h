@@ -18,4 +18,6 @@
     CLPlacemark *placemark;
 }
 
+#define MAX_AGE 1209600.0; /* Two weeks (for testing purposes) */
+
 @end

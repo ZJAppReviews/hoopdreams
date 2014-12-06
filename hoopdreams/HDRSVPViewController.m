@@ -56,6 +56,13 @@
 */
 
 - (IBAction)submitButtonPressed:(id)sender {
+    
+    int spots = [[_game objectForKey:@"spots"] intValue];
+    NSNumber *newSpots = [NSNumber numberWithInt:spots - 1];
+    [_game setObject:newSpots forKey:@"spots"];
+    [_game saveInBackground];
+    _spotsLabel.text = [newSpots stringValue];
+    
     Class mapItemClass = [MKMapItem class];
     
     if (mapItemClass && [mapItemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {

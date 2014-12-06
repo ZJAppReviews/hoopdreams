@@ -146,34 +146,42 @@
     
     NSMutableArray *filtered = [[NSMutableArray alloc] init];
     for (PFObject *PFobj in objects) {
-        int spots = [[PFobj objectForKey:@"spots"] intValue];
         
-        switch (delegate.settingSpots) {
-            case kGameSizeAny:
-                [filtered addObject:PFobj];
-                break;
-                
-            case kGameSizeSmall:
-                if (spots < 3) {
+        NSDate *date = PFobj.updatedAt;
+        NSTimeInterval age = [[NSDate date] timeIntervalSinceDate:date];
+        NSTimeInterval max_age = MAX_AGE;
+        
+        if (age < max_age)
+        {
+            int spots = [[PFobj objectForKey:@"spots"] intValue];
+        
+            switch (delegate.settingSpots) {
+                case kGameSizeAny:
                     [filtered addObject:PFobj];
-                }
-                break;
+                    break;
                 
-            case kGameSizeMedium:
-                if (spots == 3) {
-                    [filtered addObject:PFobj];
-                }
-                break;
+                case kGameSizeSmall:
+                    if (spots < 3 && spots > 0) {
+                        [filtered addObject:PFobj];
+                    }
+                    break;
                 
-            case kGameSizeLarge:
-                if (spots > 3) {
-                    [filtered addObject:PFobj];
-                }
-                break;
+                case kGameSizeMedium:
+                    if (spots == 3) {
+                        [filtered addObject:PFobj];
+                    }
+                    break;
                 
-            default:
-                NSLog(@"Invalid game size setting.");
-                break;
+                case kGameSizeLarge:
+                    if (spots > 3) {
+                        [filtered addObject:PFobj];
+                    }
+                    break;
+                
+                default:
+                    NSLog(@"Invalid game size setting.");
+                    break;
+            }
         }
     }
     
